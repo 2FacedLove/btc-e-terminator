@@ -1,7 +1,9 @@
-btc-e-terminator
+btc-e-terminator (chrome extension)
 ================
 
 Makes simple and fast terminal from original btc-e homepage
+
+Link to extension: https://chrome.google.com/webstore/detail/btc-e-terminator/jlfdbhddibhoilgnobkdcefhlkghhkmn
 
 Now you can block unfunctional (and functional) sections of btc-e.com homepage!
 
