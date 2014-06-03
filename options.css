@@ -1,66 +1,66 @@
 body {
-	margin-left: 20px;
-	background: url('bg.jpg');
+    margin-left: 20px;
+    background: url('bg.jpg');
 }
 
 h2 {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 .section {
-	float: left;
-	background-color: white;
-	margin-top: 15px;
-	margin-right: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
-	padding-left: 10px;
+    float: left;
+    background-color: white;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
 
-	/*border: 0 dotted #666;
-	border-right-width: 1px;
-	border-bottom-width: 1px;*/
-	border-radius: 8px;
+    /*border: 0 dotted #666;
+    border-right-width: 1px;
+    border-bottom-width: 1px;*/
+    border-radius: 8px;
 }
 
 .section h3 {
-	margin: 10px 0;
+    margin: 10px 0;
 }
 
 .subsections {
-	margin-left: 20px;
+    margin-left: 20px;
 }
 
 .marked {
-	color: #cc0000;
-	font-weight: bolder;
+    color: #cc0000;
+    font-weight: bolder;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 
 .buttons {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .buttons button {
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 3px;
-	cursor: pointer;
-	margin-right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 button#saveOptions {
-	width: 93px;
+    width: 93px;
 }
 
 button#selectAll, button#clearAll {
-	width: 75px;
+    width: 75px;
 }
 
 #statusLine {
-	margin-top: 10px;
-	color: #ffffff;
-	display: none;
+    margin-top: 10px;
+    color: #ffffff;
+    display: none;
 }

@@ -1,51 +1,45 @@
 .userMenu {
-	margin-bottom: 3px;
-	margin-left: 5px;
+    margin-bottom: 3px;
+    margin-left: 5px;
 }
 
 .userLogin {
-	height: 30px;
-	float: none;
+    height: 30px;
+    float: none;
 }
-
 .userLogin #login {
-	float: left;
+    float: left;
 }
-
 .userLogin #login input {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .extOptions {
-	display: inline-block;
-	position: absolute;
-	margin-top: -3px;
-	left: 555px;
+    display: inline-block;
+    position: absolute;
+    margin-top: -3px;
+    left: 555px;
 }
-
 .extOptionsLink {
-	padding-top: 7px;
-	font-size: xx-small;
-	height: 16px;
-	display: inline-block;
-	width: 125px;
+    padding-top: 7px;
+    font-size: xx-small;
+    height: 16px;
+    display: inline-block;
+    width: 125px;
 }
-
 .bitcoinWisdomWrapper {
-	width: 675px;
-	overflow: hidden;
+    width: 675px;
+    overflow: hidden;
 }
-
 .bitcoinWisdomWrapper.right, .bitcoinWisdomWrapper.rightdown {
-	width: 575px;
-	height: 470px;
+    width: 575px;
+    height: 470px;
 }
-
 .bitcoinWisdomWrapper.wide {
-	width: 675px;
+    width: 675px;
 }
 
 .extOptionsLink:hover {
-	color: #aa0000;
-	text-decoration: none;
+    color: #aa0000;
+    text-decoration: none;
 }
