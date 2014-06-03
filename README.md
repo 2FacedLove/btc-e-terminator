@@ -13,18 +13,13 @@ Functionality:
  - block trade history
  - block buy/sell order lists
  - etc
-
-
  - integration with bitcoinWisdom (!)
 
-Extension feedback
+Extension feedback: https://groups.google.com/forum/#!forum/btc-e-terminator
 
-https://groups.google.com/forum/#!forum/btc-e-terminator
-
-Extension donate
-
-BTC: 1LVEPvjdHTr8AwPYEzZAXGqnRNJv9m7VW5
-LTC: LTNQ4CT3LwnXdnzH9ssGwTa7aK55f2vphG
+Extension donate<br>
+BTC: 1LVEPvjdHTr8AwPYEzZAXGqnRNJv9m7VW5<br>
+LTC: LTNQ4CT3LwnXdnzH9ssGwTa7aK55f2vphG<br>
 
 Have a good trades!
 
