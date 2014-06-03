@@ -1,11 +1,11 @@
 btc-e-terminator (chrome extension)
 ================
 
-Makes simple and fast terminal from original btc-e homepage
+Makes simple and fast terminal from original btc-e homepage. Current release: 0.2.3
 
 Link to extension: https://chrome.google.com/webstore/detail/btc-e-terminator/jlfdbhddibhoilgnobkdcefhlkghhkmn
 
-Now you can block unfunctional (and functional) sections of btc-e.com homepage!
+Functionality:
 
  - block CHAT
  - block all right sidebar
@@ -14,12 +14,15 @@ Now you can block unfunctional (and functional) sections of btc-e.com homepage!
  - block buy/sell order lists
  - etc
 
-UPD: integration with bitcoinWisdom (!)
+
+ - integration with bitcoinWisdom (!)
 
 Extension feedback
+
 https://groups.google.com/forum/#!forum/btc-e-terminator
 
 Extension donate
+
 BTC: 1LVEPvjdHTr8AwPYEzZAXGqnRNJv9m7VW5
 LTC: LTNQ4CT3LwnXdnzH9ssGwTa7aK55f2vphG
 
