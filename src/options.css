@@ -7,6 +7,14 @@ h2 {
     margin-top: 15px;
 }
 
+.commonInfo {
+    margin-top: -10px;
+}
+
+a {
+    color: black;
+}
+
 .section {
     float: left;
     background-color: white;

@@ -78,9 +78,8 @@ var btc_e_terminator_content = {
 
         this.content = document.getElementById("content");
         elements['rightAll'] = this.content.children[1];
-        elements['advantages'] = this.content.children[1].children[3];
-        elements['tweets'] = this.content.children[1].children[2];
-        elements['users'] = this.content.children[1].children[1];
+        elements['advantages'] = this.content.children[1].children[2];
+        elements['tweets'] = this.content.children[1].children[1];
         elements['chat'] = this.content.children[1].children[0];
         elements['gfx'] = document.getElementById("chart_div");
         elements['pairs'] = elements['gfx'].parentNode.children[1];
@@ -165,7 +164,7 @@ var btc_e_terminator_content = {
     },
 
     setDefaultOptions: function () {
-        var options = ['chat', 'users', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'];
+        var options = ['chat', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'];
         this.storageOptions = {};
 
         for (var i = options.length - 1; i >= 0; i--) {
@@ -212,7 +211,7 @@ var btc_e_terminator_content = {
             }
         }
 
-        if (options['advantages'] === false || options['tweets'] === false || options['users'] === false || options['chat'] === false) {
+        if (options['advantages'] === false || options['tweets'] === false || options['chat'] === false) {
             elements['rightAll'].style.display = 'block';
         }
 

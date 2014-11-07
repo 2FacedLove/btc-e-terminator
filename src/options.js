@@ -1,7 +1,7 @@
 var btc_e_terminator_options = {
 
-    options: ['chat', 'users', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'],
-    rightBlockOptions: ['chat', 'users', 'tweets', 'advantages'],
+    options: ['chat', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'],
+    rightBlockOptions: ['chat', 'tweets', 'advantages'],
     currentOrdersOptions: ['sellOrders', 'buyOrders'],
     defaultOptions: {},
     statusHideDelay: 1750,
