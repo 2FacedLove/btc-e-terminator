@@ -186,6 +186,7 @@ var btc_e_terminator_content = {
         var options = self.storageOptions;
         var elements = self.elements;
         var content = self.content;
+        var tmpEl;
 
         self.isOptionProcessed = true;
 
@@ -198,7 +199,13 @@ var btc_e_terminator_content = {
         }
 
         //terminator options
-        elements['menu'].appendChild(elements['extOptions']);
+        if(tmpEl = elements['menu'].children[1]) {
+            if(tmpEl = tmpEl.children[0])
+                if(tmpEl = tmpEl.children[1])
+                    tmpEl.appendChild(elements['extOptions']);
+        }
+        else 
+            elements['menu'].appendChild(elements['extOptions']);
 
         for (var key in options) {
             if (options.hasOwnProperty(key) && elements.hasOwnProperty(key)) {

@@ -15,13 +15,14 @@
 }
 
 .extOptions {
+    margin-top: -3px;
     display: inline-block;
     position: absolute;
-    margin-top: -13px;
-    left: 555px;
+    left: 560px;
 }
 .extOptionsLink {
-    padding-top: 7px;
+    padding-top: 20px;
+    padding-left: 30px;
     font-size: xx-small;
     height: 16px;
     display: inline-block;
