@@ -134,8 +134,9 @@ var btc_e_terminator_content = {
         extOptionsLink.href = this.extension.getURL("options.html");
         extOptionsLink.target = '_blank';
         extOptionsLink.innerHTML = 'terminator options &nbsp; &nbsp; &nbsp;';
-        extOptionsLink.style.background = "url('" + this.extension.getURL("shotgun.png") + "') no-repeat";
-        extOptionsLink.style.backgroundPosition = "33px 0";
+        if(this.isAuthenticated) {
+            extOptionsLink.className += " loggedOn";
+        }
         extOptions.appendChild(extOptionsLink);
 
         this.elements['extOptions'] = extOptions;
@@ -163,6 +164,30 @@ var btc_e_terminator_content = {
         this.initBitcoinWisdomElement('RightDown');
     },
 
+    appendBitcoinWisdomElement: function(token) {
+        var self = this;
+        var options = self.storageOptions;
+        var elements = self.elements;
+        var content = self.content;
+        var pairPath = "";
+
+        if (options['bitcoinWisdom' + token] === true) {
+            if (options['bitcoinWisdom' + token + 'Pair']) {
+                pairPath = "markets/btce/" + options['bitcoinWisdom' + token + 'Pair'];
+            }
+            elements['bitcoinWisdom' + token + 'Frame'].src = "https://bitcoinwisdom.com/" + pairPath;
+            if (token === 'Down') {
+                elements['subContent'].appendChild(elements['bitcoinWisdomDownWrapper']);
+            }
+            else if (token === 'Right' || token === 'RightDown') {
+                content.insertBefore(elements['bitcoinWisdom' + token + 'Wrapper'], content.children[content.children.length - 1]);
+                if(options['bitcoinWisdom' + token + 'Wide'] === true) {
+                    elements['bitcoinWisdom' + token + 'Wrapper'].className += ' wide';
+                }
+            }
+        }
+    },
+
     setDefaultOptions: function () {
         var options = ['chat', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'];
         this.storageOptions = {};
@@ -186,7 +211,7 @@ var btc_e_terminator_content = {
         var options = self.storageOptions;
         var elements = self.elements;
         var content = self.content;
-        var tmpEl;
+        var tmpEl = false;
 
         self.isOptionProcessed = true;
 
@@ -199,13 +224,17 @@ var btc_e_terminator_content = {
         }
 
         //terminator options
-        if(tmpEl = elements['menu'].children[1]) {
-            if(tmpEl = tmpEl.children[0])
-                if(tmpEl = tmpEl.children[1])
-                    tmpEl.appendChild(elements['extOptions']);
+        if(!self.isAuthenticated)
+            if(tmpEl = elements['menu'].children[1]) {
+                if(tmpEl = tmpEl.children[0])
+                    if(tmpEl = tmpEl.children[1]) {
+                        tmpEl.appendChild(elements['extOptions']);
+                        tmpEl = true;
+                    }
         }
-        else 
+        if(tmpEl !== true) {
             elements['menu'].appendChild(elements['extOptions']);
+        }
 
         for (var key in options) {
             if (options.hasOwnProperty(key) && elements.hasOwnProperty(key)) {
@@ -230,28 +259,9 @@ var btc_e_terminator_content = {
             content.style.width = '100%';
         }
 
-        function appendBitcoinWisdomElement(token) {
-            var pairPath = "";
-            if (options['bitcoinWisdom' + token] === true) {
-                if (options['bitcoinWisdom' + token + 'Pair']) {
-                    pairPath = "markets/btce/" + options['bitcoinWisdom' + token + 'Pair'];
-                }
-                elements['bitcoinWisdom' + token + 'Frame'].src = "https://bitcoinwisdom.com/" + pairPath;
-                if (token === 'Down') {
-                    elements['subContent'].appendChild(elements['bitcoinWisdomDownWrapper']);
-                }
-                else if (token === 'Right' || token === 'RightDown') {
-                    content.insertBefore(elements['bitcoinWisdom' + token + 'Wrapper'], content.children[content.children.length - 1]);
-                    if(options['bitcoinWisdom' + token + 'Wide'] === true) {
-                        elements['bitcoinWisdom' + token + 'Wrapper'].className += ' wide';
-                    }
-                }
-            }
-        }
-
-        appendBitcoinWisdomElement('Down');
-        appendBitcoinWisdomElement('Right');
-        appendBitcoinWisdomElement('RightDown');
+        self.appendBitcoinWisdomElement('Down');
+        self.appendBitcoinWisdomElement('Right');
+        self.appendBitcoinWisdomElement('RightDown');
     },
 
     run: function () {

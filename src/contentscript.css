@@ -27,6 +27,13 @@
     height: 16px;
     display: inline-block;
     width: 125px;
+    background: url('shotgun.png') no-repeat;
+    background-position: 33px 0;
+}
+.extOptionsLink.loggedOn {
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: xx-small;
 }
 .bitcoinWisdomWrapper {
     width: 675px;
