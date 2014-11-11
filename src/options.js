@@ -18,6 +18,13 @@ var btc_e_terminator_options = {
                 self.defaultOptions['bitcoinWisdom' + token  + 'Width'] = '850';
             }
         }
+        self.bitcoinWisdom.restoreDefaults = function (storageOptions) {
+            for(var i = tokens.length - 1; i >= 0; i--) {
+                var token = tokens[i];
+                document.getElementById('bitcoinWisdom' + token + 'Pair').value = self.defaultOptions['bitcoinWisdom' + token + 'Pair'];
+                document.getElementById('bitcoinWisdom' + token + 'Width').value = self.defaultOptions['bitcoinWisdom' + token + 'Width'];
+            }
+        }
         self.bitcoinWisdom.restore = function (storageOptions) {
             for(var i = tokens.length - 1; i >= 0; i--) {
                 var token = tokens[i];
@@ -36,7 +43,6 @@ var btc_e_terminator_options = {
 
     initialize: function () {
         this.bitcoinWisdomInit();
-
         for (var i = this.options.length - 1; i >= 0; i--) {
             this.defaultOptions[this.options[i]] = true;
         }
@@ -85,6 +91,13 @@ var btc_e_terminator_options = {
 
     clearAll: function () {
         this.toggleAll(false);
+    },
+
+    restoreDefaultsOptions: function() {
+        for (var i = this.options.length - 1; i >= 0; i--) {
+            this.setElementChecked(this.options[i], this.defaultOptions[this.options[i]]);
+        }
+        this.bitcoinWisdom.restoreDefaults();
     },
 
     showAndHideStatus: function () {
@@ -167,6 +180,10 @@ var btc_e_terminator_options = {
         });
         document.querySelector('#clearAll').addEventListener('click', function () {
             self.clearAll.call(self);
+        });
+
+        document.querySelector('#defaultsOptions').addEventListener('click', function () {
+            self.restoreDefaultsOptions.call(self);
         });
 
         document.querySelector('#saveOptions').addEventListener('click', function () {

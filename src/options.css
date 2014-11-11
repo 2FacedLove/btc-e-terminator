@@ -67,7 +67,7 @@ button#saveOptions {
     width: 93px;
 }
 
-button#selectAll, button#clearAll {
+button#selectAll, button#clearAll, button#defaultsOptions {
     width: 75px;
 }
 
