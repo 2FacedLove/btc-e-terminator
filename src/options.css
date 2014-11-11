@@ -43,6 +43,10 @@ a {
     font-weight: bolder;
 }
 
+select {
+    margin: 5px 0;
+}
+
 .clear {
     clear: both;
 }

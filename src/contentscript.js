@@ -181,15 +181,16 @@ var btc_e_terminator_content = {
             }
             else if (token === 'Right' || token === 'RightDown') {
                 content.insertBefore(elements['bitcoinWisdom' + token + 'Wrapper'], content.children[content.children.length - 1]);
-                if(options['bitcoinWisdom' + token + 'Wide'] === true) {
-                    elements['bitcoinWisdom' + token + 'Wrapper'].className += ' wide';
+                if(options['bitcoinWisdom' + token + 'Width'] === true) {
+                    //elements['bitcoinWisdom' + token + 'Wrapper'].className += ' wide';
+                    elements['bitcoinWisdom' + token + 'Wrapper'].style.width = options['bitcoinWisdom' + token + 'Width'] + 'px';
                 }
             }
         }
     },
 
     setDefaultOptions: function () {
-        var options = ['chat', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWide', 'bitcoinWisdomRightDownWide'];
+        var options = ['chat', 'tweets', 'advantages', 'news', 'gfx', 'mainToLeft', 'footer', 'header', 'saveProfile', 'sellOrders', 'buyOrders', 'feeMessage', 'tradeHistory', 'bitcoinWisdomDown', 'bitcoinWisdomRight', 'bitcoinWisdomRightDown', 'bitcoinWisdomRightWidth', 'bitcoinWisdomRightDownWidth'];
         this.storageOptions = {};
 
         for (var i = options.length - 1; i >= 0; i--) {
