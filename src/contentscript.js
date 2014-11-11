@@ -149,7 +149,9 @@ var btc_e_terminator_content = {
         bitcoinWisdomWrapper = document.createElement('div');
         bitcoinWisdomWrapper.className = 'bitcoinWisdomWrapper' + ' ' + token.toLowerCase();
         bitcoinWisdom = document.createElement('iframe');
-        bitcoinWisdom.width = "850";
+
+        var width = parseInt(this.storageOptions['bitcoinWisdom' + token + 'Width'], 10);
+        bitcoinWisdom.width = width > 0 ? width + 175 : "850";
         bitcoinWisdom.height = "500";
 
         bitcoinWisdomWrapper.appendChild(bitcoinWisdom);
@@ -181,9 +183,9 @@ var btc_e_terminator_content = {
             }
             else if (token === 'Right' || token === 'RightDown') {
                 content.insertBefore(elements['bitcoinWisdom' + token + 'Wrapper'], content.children[content.children.length - 1]);
-                if(options['bitcoinWisdom' + token + 'Width'] === true) {
-                    //elements['bitcoinWisdom' + token + 'Wrapper'].className += ' wide';
-                    elements['bitcoinWisdom' + token + 'Wrapper'].style.width = options['bitcoinWisdom' + token + 'Width'] + 'px';
+                var width = parseInt(options['bitcoinWisdom' + token + 'Width'], 10);
+                if(width > 0) {
+                    elements['bitcoinWisdom' + token + 'Wrapper'].style.width = width + 'px';
                 }
             }
         }
