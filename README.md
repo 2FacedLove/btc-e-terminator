@@ -1,7 +1,7 @@
 btc-e-terminator (chrome extension)
 ================
 
-Makes simple and fast terminal from original btc-e homepage. Current release: 0.2.5
+Makes simple and fast terminal from original btc-e homepage. Current release: 0.2.6
 
 Link to extension: https://chrome.google.com/webstore/detail/btc-e-terminator/jlfdbhddibhoilgnobkdcefhlkghhkmn
 
