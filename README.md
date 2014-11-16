@@ -18,8 +18,7 @@ Functionality:
 Extension feedback: https://groups.google.com/forum/#!forum/btc-e-terminator
 
 Extension donate<br>
-BTC: 1LVEPvjdHTr8AwPYEzZAXGqnRNJv9m7VW5<br>
-LTC: LTNQ4CT3LwnXdnzH9ssGwTa7aK55f2vphG<br>
+BTC: 1DZXZGkUCmSUNmRTMrx9hj2e22y4mEn6vW<br>
 
 Have a good trades!
 
